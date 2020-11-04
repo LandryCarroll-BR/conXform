@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {height: 100%; }
+div { height: 100%; }
+
+
+#splash {
+    background: rgb(225,217,238);
+    background: linear-gradient(0deg, rgba(225,217,238,1) 0%, rgba(241,230,223,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chain-container {
+    display: flex;
+    position: relative;
+    margin-bottom: .7em;
+    height: 12em;
+}
+
+#unbroken, #broken {
+    position: absolute;
+    z-index: 20;
+}
+
+#unbroken {
+    height: 12em;
+    right: -3.5em;
+    animation: MoveUpDown 1.9s linear infinite;
+    position: absolute;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
+
+#broken {
+    height: 14em;
+    right: -4em;
+    bottom: .5em;
+}
+
+#ball-shadow {
+    height: 1.8em;
+    width: 5em;
+    opacity: .7;
+    filter: blur(.5em);
+    margin-bottom: 2em;
+    animation: Squeeze 1.9s linear infinite;
+}
+
+@keyframes squeeze {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
+
+
+
+button {
+    display: block;
+    outline: none;
+    border: .2em solid black;
+    padding: .2em .8em;
+    background: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
